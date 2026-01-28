@@ -189,82 +189,123 @@ export default function Home() {
 </section>` }} />
          
 
-         <div id="features" dangerouslySetInnerHTML={{ __html: `<section class="relative bg-slate-950 py-32 lg:py-40 overflow-hidden font-sans">
-  <!-- Background Ambient Glows -->
-  <div class="absolute top-0 -left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px]"></div>
-  <div class="absolute bottom-0 -right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px]"></div>
+         <div id="features" dangerouslySetInnerHTML={{ __html: `"use client";
 
-  <div class="container mx-auto px-6 relative z-10">
-    <!-- Header Section -->
-    <div class="max-w-4xl mb-24">
-      <h2 class="text-indigo-400 font-bold tracking-widest uppercase text-sm mb-4">
-        L'Élite du Web Design
-      </h2>
-      <h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8">
-        L'Impact <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-white">Noxosite</span>
-      </h1>
-      <p class="text-xl text-slate-400 leading-relaxed max-w-2xl">
-        Découvrez comment notre approche 'Haute Couture' — maîtrise du vide, typographie d'art et cohérence totale — transforme votre activité en une marque qui impose le respect.
-      </p>
-    </div>
+import { User } from "lucide-react";
 
-    <!-- Features Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      
-      <!-- Feature 1: La Fin de l'Anonymat -->
-      <div class="group relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500">
-        <div class="w-14 h-14 bg-gradient-to-br from-[#6366f1] to-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-500/20">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-          </svg>
+export default function LandingSection() {
+  return (
+    <section className="relative bg-slate-950 py-32 lg:py-40 overflow-hidden font-sans">
+      {/* Background Ambient Glows */}
+      <div className="absolute top-0 -left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px]"></div>
+      <div className="absolute bottom-0 -right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px]"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Header Section */}
+        <div className="max-w-4xl mb-24">
+          <h2 className="text-indigo-400 font-bold tracking-widest uppercase text-sm mb-4">
+            L'Élite du Web Design
+          </h2>
+          <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8">
+            L'Impact{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-white">
+              Noxosite
+            </span>
+          </h1>
+          <p className="text-xl text-slate-400 leading-relaxed max-w-2xl">
+            Découvrez comment notre approche 'Haute Couture' — maîtrise du vide,
+            typographie d'art et cohérence totale — transforme votre activité en
+            une marque qui impose le respect.
+          </p>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-4">La Fin de l'Anonymat</h3>
-        <p class="text-slate-400 leading-relaxed">
-          Une TPE "invisible" est souvent un talent immense qui n'a pas l'écrin qu'il mérite. Nous révélons votre existence en créant une signature visuelle magnétique qui sort de l'ombre.
-        </p>
-        <div class="mt-8 w-full h-px bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
-      </div>
 
-      <!-- Feature 2: L'Effet "Classe" -->
-      <div class="group relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500">
-        <div class="w-14 h-14 bg-gradient-to-br from-[#6366f1] to-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-500/20">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-          </svg>
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Feature 1: Ce site est le plus magnifique du monde */}
+          <div className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500">
+            <div className="w-14 h-14 bg-gradient-to-br from-[#6366f1] to-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-500/20">
+              <User className="h-7 w-7 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ce site est le plus magnifique du monde
+            </h3>
+            <p className="text-slate-400 leading-relaxed">
+              Une TPE "invisible" est souvent un talent immense qui n'a pas
+              l'écrin qu'il mérite. Nous révélons votre existence en créant une
+              signature visuelle magnétique qui sort de l'ombre.
+            </p>
+            <div className="mt-8 w-full h-px bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
+          </div>
+
+          {/* Feature 2: L'Effet "Classe" */}
+          <div className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500">
+            <div className="w-14 h-14 bg-gradient-to-br from-[#6366f1] to-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-500/20">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-7 w-7 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              L'Effet "Classe"
+            </h3>
+            <p className="text-slate-400 leading-relaxed">
+              Nous éradiquons le bricolage numérique. Ce fini professionnel —
+              cette touche premium — rassure instantanément vos clients et
+              justifie la pleine valeur de votre expertise dès le premier clic.
+            </p>
+            <div className="mt-8 w-full h-px bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
+          </div>
+
+          {/* Feature 3: L'Alignement */}
+          <div className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500">
+            <div className="w-14 h-14 bg-gradient-to-br from-[#6366f1] to-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-500/20">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-7 w-7 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">L'Alignement</h3>
+            <p className="text-slate-400 leading-relaxed">
+              Attirez une clientèle à votre image. Nous créons une cohérence
+              totale entre ce que vous êtes et ce que vous montrez, transformant
+              de simples visiteurs en vos ambassadeurs idéaux.
+            </p>
+            <div className="mt-8 w-full h-px bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
+          </div>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-4">L'Effet "Classe"</h3>
-        <p class="text-slate-400 leading-relaxed">
-          Nous éradiquons le bricolage numérique. Ce fini professionnel — cette touche premium — rassure instantanément vos clients et justifie la pleine valeur de votre expertise dès le premier clic.
-        </p>
-        <div class="mt-8 w-full h-px bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
-      </div>
 
-      <!-- Feature 3: L'Alignement -->
-      <div class="group relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500">
-        <div class="w-14 h-14 bg-gradient-to-br from-[#6366f1] to-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-500/20">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-          </svg>
+        {/* Bottom CTA / Stat */}
+        <div className="mt-20 flex flex-col items-center justify-center">
+          <div className="h-20 w-px bg-gradient-to-b from-indigo-500 to-transparent mb-8"></div>
+          <p className="text-white font-medium text-lg text-center">
+            Nous transformons le potentiel invisible en une signature{" "}
+            <span className="text-indigo-400">irrésistible</span>.
+          </p>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-4">L'Alignement</h3>
-        <p class="text-slate-400 leading-relaxed">
-          Attirez une clientèle à votre image. Nous créons une cohérence totale entre ce que vous êtes et ce que vous montrez, transformant de simples visiteurs en vos ambassadeurs idéaux.
-        </p>
-        <div class="mt-8 w-full h-px bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
       </div>
-
-    </div>
-
-    <!-- Bottom CTA / Stat -->
-    <div class="mt-20 flex flex-col items-center justify-center">
-      <div class="h-20 w-px bg-gradient-to-b from-indigo-500 to-transparent mb-8"></div>
-      <p class="text-white font-medium text-lg text-center">
-        Nous transformons le potentiel invisible en une signature <span class="text-indigo-400">irrésistible</span>.
-      </p>
-    </div>
-  </div>
-</section>` }} />
+    </section>
+  );
+}` }} />
          
 
          <div id="services" dangerouslySetInnerHTML={{ __html: `<section id="services" className="bg-slate-950 text-white py-32 lg:py-40 font-inter overflow-hidden">
