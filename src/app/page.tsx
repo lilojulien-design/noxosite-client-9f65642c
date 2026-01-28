@@ -10,152 +10,104 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white font-sans antialiased">
          
-         <div id="header" dangerouslySetInnerHTML={{ __html: `<header class="fixed top-0 left-0 w-full z-[100] border-b border-white/5 backdrop-blur-xl bg-slate-950/70">
-  <nav class="container mx-auto px-6 h-24 flex items-center justify-between">
-    <!-- Logo -->
-    <div class="flex items-center gap-2">
-      <div class="w-10 h-10 bg-gradient-to-br from-[#6366f1] to-[#4f46e5] rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-        <span class="text-white font-black text-xl italic">N</span>
+         <div id="hero" dangerouslySetInnerHTML={{ __html: `<section className="relative min-h-screen bg-[#0f172a] font-['Inter'] overflow-hidden">
+  {/* Header Navigation */}
+  <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0f172a]/70 border-b border-white/5">
+    <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="flex items-center space-x-2">
+        <div className="w-8 h-8 bg-gradient-to-tr from-[#6366f1] to-[#a855f7] rounded-lg"></div>
+        <span className="text-white font-bold text-xl tracking-tight">NOXOSITE</span>
       </div>
-      <span class="text-2xl font-bold tracking-tight text-white">
-        Noxo<span class="text-[#6366f1]">site</span>
-      </span>
-    </div>
-
-    <!-- Desktop Navigation -->
-    <div class="hidden md:flex items-center gap-10">
-      <a href="#vision" class="text-sm font-medium text-neutral-400 hover:text-[#6366f1] transition-colors duration-300 relative group">
-        La Vision
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6366f1] transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="#expertise" class="text-sm font-medium text-neutral-400 hover:text-[#6366f1] transition-colors duration-300 relative group">
-        L'Effet Classe
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6366f1] transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="#alignement" class="text-sm font-medium text-neutral-400 hover:text-[#6366f1] transition-colors duration-300 relative group">
-        L'Alignement
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6366f1] transition-all duration-300 group-hover:w-full"></span>
-      </a>
-    </div>
-
-    <!-- CTA Button -->
-    <div class="flex items-center gap-6">
-      <a href="#contact" class="hidden lg:block text-sm font-semibold text-white hover:text-[#6366f1] transition-colors">
-        Parlons de vous
-      </a>
-      <a href="#devis" class="px-8 py-3.5 bg-gradient-to-r from-[#6366f1] to-[#4f46e5] text-white rounded-full font-bold text-sm hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] hover:-translate-y-0.5 transition-all duration-300">
-        Créer ma Signature
-      </a>
-      
-      <!-- Mobile Toggle -->
-      <button class="md:hidden flex flex-col gap-1.5">
-        <div class="w-6 h-0.5 bg-white"></div>
-        <div class="w-6 h-0.5 bg-white"></div>
-        <div class="w-4 h-0.5 bg-[#6366f1] self-end"></div>
-      </button>
-    </div>
-  </nav>
-</header>` }} />
-         
-
-         <div id="hero" dangerouslySetInnerHTML={{ __html: `<section class="relative min-h-screen bg-[#0f172a] font-['Inter'] overflow-hidden">
-  <!-- Header Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0f172a]/70 border-b border-white/5">
-    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center space-x-2">
-        <div class="w-8 h-8 bg-gradient-to-tr from-[#6366f1] to-[#a855f7] rounded-lg"></div>
-        <span class="text-white font-bold text-xl tracking-tight">NOXOSITE</span>
-      </div>
-      <nav class="hidden md:flex items-center space-x-10">
-        <a href="#" class="text-sm font-medium text-slate-300 hover:text-[#6366f1] transition-colors">Services</a>
-        <a href="#" class="text-sm font-medium text-slate-300 hover:text-[#6366f1] transition-colors">Notre Vision</a>
-        <a href="#" class="text-sm font-medium text-slate-300 hover:text-[#6366f1] transition-colors">Portfolio</a>
+      <nav className="hidden md:flex items-center space-x-10">
+        <a href="#services" className="text-sm font-medium text-slate-300 hover:text-[#6366f1] transition-colors">Services</a>
+        <a href="#vision" className="text-sm font-medium text-slate-300 hover:text-[#6366f1] transition-colors">Notre Vision</a>
+        <a href="#portfolio" className="text-sm font-medium text-slate-300 hover:text-[#6366f1] transition-colors">Portfolio</a>
       </nav>
       <div>
-        <a href="#" class="px-6 py-2.5 rounded-full bg-white text-[#0f172a] text-sm font-semibold hover:bg-slate-200 transition-all">Démarrer un projet</a>
+        <a href="#start-project" className="px-6 py-2.5 rounded-full bg-white text-[#0f172a] text-sm font-semibold hover:bg-slate-200 transition-all">Démarrer un projet</a>
       </div>
     </div>
   </header>
 
-  <!-- Decorative Background Elements -->
-  <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#6366f1]/10 rounded-full blur-[120px] pointer-events-none"></div>
-  <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#4f46e5]/10 rounded-full blur-[100px] pointer-events-none"></div>
+  {/* Decorative Background Elements */}
+  <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#6366f1]/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#4f46e5]/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-  <!-- Hero Content -->
-  <div class="container mx-auto px-6 pt-48 pb-32">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="relative z-10">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
-          <span class="flex h-2 w-2 rounded-full bg-[#6366f1]"></span>
-          <span class="text-xs font-semibold uppercase tracking-widest text-slate-400">Signature Visuelle de Prestige</span>
+  {/* Hero Content */}
+  <div className="container mx-auto px-6 pt-48 pb-32">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10">
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
+          <span className="flex h-2 w-2 rounded-full bg-[#6366f1]"></span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-slate-400">Signature Visuelle de Prestige</span>
         </div>
         
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-8">
-          Transformez votre <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-indigo-300">potentiel invisible</span> en marque d'élite.
+        <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-8">
+          Transformez votre <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-indigo-300">potentiel invisible</span> en marque d'élite.
         </h1>
         
-        <p class="text-xl text-slate-400 leading-relaxed mb-10 max-w-xl">
+        <p className="text-xl text-slate-400 leading-relaxed mb-10 max-w-xl">
           Nous créons l'écrin numérique que votre talent mérite. Passez de l'ombre d'un simple service à l'éclat d'une présence en ligne qui impose le respect et attire vos clients idéaux.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-5">
-          <button class="px-8 py-4 rounded-full bg-gradient-to-r from-[#6366f1] to-indigo-500 text-white font-bold text-lg shadow-[0_0_40px_rgba(99,102,241,0.3)] hover:scale-105 transition-all">
+        <div className="flex flex-col sm:flex-row gap-5">
+          <button className="px-8 py-4 rounded-full bg-gradient-to-r from-[#6366f1] to-indigo-500 text-white font-bold text-lg shadow-[0_0_40px_rgba(99,102,241,0.3)] hover:scale-105 transition-all">
             Révéler ma marque
           </button>
-          <button class="px-8 py-4 rounded-full bg-transparent border border-white/20 text-white font-bold text-lg hover:bg-white/5 transition-all">
+          <button className="px-8 py-4 rounded-full bg-transparent border border-white/20 text-white font-bold text-lg hover:bg-white/5 transition-all">
             Notre approche
           </button>
         </div>
 
-        <!-- Trust Markers -->
-        <div class="mt-12 flex items-center space-x-8 pt-8 border-t border-white/5">
+        {/* Trust Markers */}
+        <div className="mt-12 flex items-center space-x-8 pt-8 border-t border-white/5">
           <div>
-            <p class="text-white font-bold text-2xl">100%</p>
-            <p class="text-slate-500 text-xs uppercase tracking-wider">Design Sur-mesure</p>
+            <p className="text-white font-bold text-2xl">100%</p>
+            <p className="text-slate-500 text-xs uppercase tracking-wider">Design Sur-mesure</p>
           </div>
-          <div class="w-px h-8 bg-white/10"></div>
+          <div className="w-px h-8 bg-white/10"></div>
           <div>
-            <p class="text-white font-bold text-2xl">Éclat</p>
-            <p class="text-slate-500 text-xs uppercase tracking-wider">Fini Professionnel</p>
+            <p className="text-white font-bold text-2xl">Éclat</p>
+            <p className="text-slate-500 text-xs uppercase tracking-wider">Fini Professionnel</p>
           </div>
-          <div class="w-px h-8 bg-white/10"></div>
+          <div className="w-px h-8 bg-white/10"></div>
           <div>
-            <p class="text-white font-bold text-2xl">Impact</p>
-            <p class="text-slate-500 text-xs uppercase tracking-wider">Clientèle Ciblée</p>
+            <p className="text-white font-bold text-2xl">Impact</p>
+            <p className="text-slate-500 text-xs uppercase tracking-wider">Clientèle Ciblée</p>
           </div>
         </div>
       </div>
 
-      <!-- Visual Element: Premium Card Mockup -->
-      <div class="relative lg:block">
-        <div class="relative w-full aspect-square flex items-center justify-center">
-          <!-- Glassmorphic Card 1 -->
-          <div class="absolute transform -rotate-6 -translate-x-12 z-0 w-72 h-96 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
-            <div class="w-12 h-12 bg-[#6366f1]/20 rounded-full mb-6"></div>
-            <div class="h-4 w-3/4 bg-white/10 rounded-full mb-4"></div>
-            <div class="h-4 w-1/2 bg-white/10 rounded-full"></div>
+      {/* Visual Element: Premium Card Mockup */}
+      <div className="relative lg:block">
+        <div className="relative w-full aspect-square flex items-center justify-center">
+          {/* Glassmorphic Card 1 */}
+          <div className="absolute transform -rotate-6 -translate-x-12 z-0 w-72 h-96 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
+            <div className="w-12 h-12 bg-[#6366f1]/20 rounded-full mb-6"></div>
+            <div className="h-4 w-3/4 bg-white/10 rounded-full mb-4"></div>
+            <div className="h-4 w-1/2 bg-white/10 rounded-full"></div>
           </div>
-          <!-- Main Prestige Card -->
-          <div class="relative z-20 w-80 h-[480px] bg-gradient-to-br from-slate-900 to-black border border-white/20 rounded-[40px] p-1 shadow-[0_50px_100px_rgba(0,0,0,0.5)] flex flex-col">
-            <div class="flex-1 bg-slate-950 rounded-[36px] overflow-hidden relative">
-               <div class="absolute inset-0 bg-gradient-to-t from-[#6366f1]/20 to-transparent"></div>
-               <div class="p-8 flex flex-col h-full">
-                  <div class="flex justify-between items-start">
-                    <div class="w-10 h-10 border border-[#6366f1] rounded-full flex items-center justify-center">
-                        <div class="w-4 h-4 bg-[#6366f1] rounded-full"></div>
+          {/* Main Prestige Card */}
+          <div className="relative z-20 w-80 h-[480px] bg-gradient-to-br from-slate-900 to-black border border-white/20 rounded-[40px] p-1 shadow-[0_50px_100px_rgba(0,0,0,0.5)] flex flex-col">
+            <div className="flex-1 bg-slate-950 rounded-[36px] overflow-hidden relative">
+               <div className="absolute inset-0 bg-gradient-to-t from-[#6366f1]/20 to-transparent"></div>
+               <div className="p-8 flex flex-col h-full">
+                  <div className="flex justify-between items-start">
+                    <div className="w-10 h-10 border border-[#6366f1] rounded-full flex items-center justify-center">
+                        <div className="w-4 h-4 bg-[#6366f1] rounded-full"></div>
                     </div>
-                    <div class="text-[10px] text-white/40 uppercase tracking-widest font-bold">Digital Identity</div>
+                    <div className="text-[10px] text-white/40 uppercase tracking-widest font-bold">Digital Identity</div>
                   </div>
-                  <div class="mt-auto">
-                    <div class="text-white font-light text-3xl mb-2 italic">Signature</div>
-                    <div class="h-1 w-full bg-gradient-to-r from-[#6366f1] to-transparent mb-6"></div>
-                    <div class="text-white/50 text-sm">L'écrin de votre réussite digitale.</div>
+                  <div className="mt-auto">
+                    <div className="text-white font-light text-3xl mb-2 italic">Signature</div>
+                    <div className="h-1 w-full bg-gradient-to-r from-[#6366f1] to-transparent mb-6"></div>
+                    <div className="text-white/50 text-sm">L'écrin de votre réussite digitale.</div>
                   </div>
                </div>
             </div>
           </div>
-          <!-- Ambient Glow -->
-          <div class="absolute z-10 w-96 h-96 bg-[#6366f1]/30 rounded-full filter blur-[100px] opacity-50"></div>
+          {/* Ambient Glow */}
+          <div className="absolute z-10 w-96 h-96 bg-[#6366f1]/30 rounded-full filter blur-[100px] opacity-50"></div>
         </div>
       </div>
     </div>
@@ -163,74 +115,74 @@ export default function Home() {
 </section>` }} />
          
 
-         <div id="about" dangerouslySetInnerHTML={{ __html: `<section id='about' class='bg-slate-950 text-white py-32 lg:py-40 relative overflow-hidden font-inter'>
-  <!-- Decorative Background Elements -->
-  <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-  <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+         <div id="about" dangerouslySetInnerHTML={{ __html: `<section id='about' className='bg-slate-950 text-white py-32 lg:py-40 relative overflow-hidden font-inter'>
+  {/* Decorative Background Elements */}
+  <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-  <div class="container mx-auto px-6 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+  <div className="container mx-auto px-6 relative z-10">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
       
-      <!-- Left Content: The Mission -->
-      <div class="lg:col-span-5 lg:sticky lg:top-40">
-        <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase bg-indigo-500/10 text-[#6366f1] border border-indigo-500/20 rounded-full">
+      {/* Left Content: The Mission */}
+      <div className="lg:col-span-5 lg:sticky lg:top-40">
+        <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase bg-indigo-500/10 text-[#6366f1] border border-indigo-500/20 rounded-full">
           Notre Histoire
         </span>
-        <h2 class="text-5xl lg:text-7xl font-extrabold mb-8 leading-tight tracking-tighter">
-          La <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-white">Genèse</span>
+        <h2 className="text-5xl lg:text-7xl font-extrabold mb-8 leading-tight tracking-tighter">
+          La <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-white">Genèse</span>
         </h2>
-        <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+        <p className="text-xl text-slate-300 mb-8 leading-relaxed">
           Noxosite est né d'une conviction : le design est le raccourci cérébral de la compétence. Nous combattons l'injustice visuelle qui touche les entrepreneurs d'excellence.
         </p>
-        <p class="text-lg text-slate-400 leading-relaxed italic border-l-2 border-[#6366f1] pl-6">
+        <p className="text-lg text-slate-400 leading-relaxed italic border-l-2 border-[#6366f1] pl-6">
           "Nous transformons le potentiel invisible des entrepreneurs en une signature visuelle irrésistible, faisant passer leur activité de l'ombre d'un simple service à l'éclat d'une marque qui impose le respect dès le premier clic."
         </p>
       </div>
 
-      <!-- Right Content: The 3 Pillars -->
-      <div class="lg:col-span-7 space-y-8">
-        <!-- Pillar 1 -->
-        <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 hover:bg-white/[0.08] hover:border-indigo-500/30">
-          <div class="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#6366f1] to-[#0f172a] shadow-lg shadow-indigo-500/20">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+      {/* Right Content: The 3 Pillars */}
+      <div className="lg:col-span-7 space-y-8">
+        {/* Pillar 1 */}
+        <div className="group p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 hover:bg-white/[0.08] hover:border-indigo-500/30">
+          <div className="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#6366f1] to-[#0f172a] shadow-lg shadow-indigo-500/20">
+            <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
           </div>
-          <h3 class="text-2xl font-bold mb-4 group-hover:text-[#6366f1] transition-colors">La Fin de l'Anonymat</h3>
-          <p class="text-slate-400 leading-relaxed">
+          <h3 className="text-2xl font-bold mb-4 group-hover:text-[#6366f1] transition-colors">La Fin de l'Anonymat</h3>
+          <p className="text-slate-400 leading-relaxed">
             Une TPE "invisible" est souvent un talent immense qui n'a pas l'écrin qu'il mérite. On ne se contente pas de créer un site, on révèle une existence aux yeux du monde.
           </p>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 hover:bg-white/[0.08] hover:border-indigo-500/30">
-          <div class="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#6366f1] to-[#0f172a] shadow-lg shadow-indigo-500/20">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.143-7.857L1 12l7.857-2.143L11 3z"></path></svg>
+        {/* Pillar 2 */}
+        <div className="group p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 hover:bg-white/[0.08] hover:border-indigo-500/30">
+          <div className="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#6366f1] to-[#0f172a] shadow-lg shadow-indigo-500/20">
+            <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.143-7.857L1 12l7.857-2.143L11 3z"></path></svg>
           </div>
-          <h3 class="text-2xl font-bold mb-4 group-hover:text-[#6366f1] transition-colors">L'Effet "Classe"</h3>
-          <p class="text-slate-400 leading-relaxed">
+          <h3 className="text-2xl font-bold mb-4 group-hover:text-[#6366f1] transition-colors">L'Effet "Classe"</h3>
+          <p className="text-slate-400 leading-relaxed">
             On sort du bricolage numérique. On apporte ce fini professionnel — cette touche "premium" — qui rassure instantanément le client et justifie la pleine valeur de l'entrepreneur.
           </p>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 hover:bg-white/[0.08] hover:border-indigo-500/30">
-          <div class="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#6366f1] to-[#0f172a] shadow-lg shadow-indigo-500/20">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.040 12.02 12.02 0 00-1.231 7.553c.643 4.72 4.1 8.58 8.906 8.72a11.952 11.952 0 0010.957-10.746c.003-.311.01-.623.01-.934V4.984z"></path></svg>
+        {/* Pillar 3 */}
+        <div className="group p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500 hover:bg-white/[0.08] hover:border-indigo-500/30">
+          <div className="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#6366f1] to-[#0f172a] shadow-lg shadow-indigo-500/20">
+            <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.040 12.02 12.02 0 00-1.231 7.553c.643 4.72 4.1 8.58 8.906 8.72a11.952 11.952 0 0010.957-10.746c.003-.311.01-.623.01-.934V4.984z"></path></svg>
           </div>
-          <h3 class="text-2xl font-bold mb-4 group-hover:text-[#6366f1] transition-colors">L'Alignement</h3>
-          <p class="text-slate-400 leading-relaxed">
+          <h3 className="text-2xl font-bold mb-4 group-hover:text-[#6366f1] transition-colors">L'Alignement</h3>
+          <p className="text-slate-400 leading-relaxed">
             Attirer une clientèle "à son image" demande une cohérence totale entre ce que l'entrepreneur est intrinsèquement et ce qu'il projette sur le web.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- Bottom Call to Action Mini-Section -->
-    <div class="mt-32 p-12 rounded-[40px] bg-gradient-to-br from-indigo-500 to-indigo-700 text-center">
-      <h3 class="text-3xl font-bold mb-4">Soutenez votre talent avec l'écrin qu'il mérite.</h3>
-      <p class="text-indigo-100 mb-8 max-w-2xl mx-auto text-lg">Parce qu'une compétence d'exception sans un design à la hauteur reste une opportunité manquée.</p>
-      <a href="#contact" class="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-full transition-transform hover:scale-105 active:scale-95 shadow-xl">
+    {/* Bottom Call to Action Mini-Section */}
+    <div className="mt-32 p-12 rounded-[40px] bg-gradient-to-br from-indigo-500 to-indigo-700 text-center">
+      <h3 className="text-3xl font-bold mb-4">Soutenez votre talent avec l'écrin qu'il mérite.</h3>
+      <p className="text-indigo-100 mb-8 max-w-2xl mx-auto text-lg">Parce qu'une compétence d'exception sans un design à la hauteur reste une opportunité manquée.</p>
+      <a href="#contact" className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-full transition-transform hover:scale-105 active:scale-95 shadow-xl">
         Donner de l'éclat à mon projet
-        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
       </a>
     </div>
   </div>
@@ -315,81 +267,81 @@ export default function Home() {
 </section>` }} />
          
 
-         <div id="services" dangerouslySetInnerHTML={{ __html: `<section id='services' class='bg-slate-950 text-white py-32 lg:py-40 font-inter overflow-hidden'>
-  <div class='container mx-auto px-6 relative'>
-    <!-- Background Decorative Elements -->
-    <div class='absolute top-0 -left-20 w-96 h-96 bg-[#6366f1]/10 rounded-full blur-[120px] pointer-events-none'></div>
-    <div class='absolute bottom-0 -right-20 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none'></div>
+         <div id="services" dangerouslySetInnerHTML={{ __html: `<section id="services" className="bg-slate-950 text-white py-32 lg:py-40 font-inter overflow-hidden">
+  <div className="container mx-auto px-6 relative">
+    {/* Background Decorative Elements */}
+    <div className="absolute top-0 -left-20 w-96 h-96 bg-[#6366f1]/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div className="absolute bottom-0 -right-20 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <!-- Header Section -->
-    <div class='max-w-4xl mb-24 relative z-10'>
-      <div class='flex items-center space-x-4 mb-6'>
-        <div class='h-[1px] w-12 bg-[#6366f1]'></div>
-        <span class='text-[#6366f1] font-semibold tracking-[0.2em] uppercase text-sm'>Expertise Noxosite</span>
+    {/* Header Section */}
+    <div className="max-w-4xl mb-24 relative z-10">
+      <div className="flex items-center space-x-4 mb-6">
+        <div className="h-[1px] w-12 bg-[#6366f1]"></div>
+        <span className="text-[#6366f1] font-semibold tracking-[0.2em] uppercase text-sm">Expertise Noxosite</span>
       </div>
-      <h2 class='text-5xl lg:text-7xl font-bold leading-tight mb-8'>
-        L'Expérience <span class='text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-blue-400'>One-Page</span>
+      <h2 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
+        L'Expérience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-blue-400">One-Page</span>
       </h2>
-      <p class='text-xl text-slate-400 leading-relaxed max-w-2xl'>
+      <p className="text-xl text-slate-400 leading-relaxed max-w-2xl">
         Une solution unique, magistrale et percutante incluant design épuré, copywriting stratégique et optimisation mobile pour un impact immédiat.
       </p>
     </div>
 
-    <!-- Services Grid -->
-    <div class='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12'>
-      <!-- Pillar 1 -->
-      <div class='group relative bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-xl transition-all duration-500 hover:border-[#6366f1]/40 hover:bg-white/[0.08] hover:-translate-y-2'>
-        <div class='mb-8 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6366f1] to-blue-600 flex items-center justify-center shadow-lg shadow-[#6366f1]/20'>
-          <svg xmlns='http://www.w3.org/2000/svg' class='h-8 w-8 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
-            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z' />
+    {/* Services Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      {/* Pillar 1 */}
+      <a href="#design" className="group relative bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-xl transition-all duration-500 hover:border-[#6366f1]/40 hover:bg-white/[0.08] hover:-translate-y-2">
+        <div className="mb-8 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6366f1] to-blue-600 flex items-center justify-center shadow-lg shadow-[#6366f1]/20">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
           </svg>
         </div>
-        <h3 class='text-2xl font-bold mb-5 group-hover:text-[#6366f1] transition-colors'>La Fin de l'Anonymat</h3>
-        <p class='text-slate-400 leading-relaxed'>
+        <h3 className="text-2xl font-bold mb-5 group-hover:text-[#6366f1] transition-colors">La Fin de l'Anonymat</h3>
+        <p className="text-slate-400 leading-relaxed">
           Une TPE "invisible" est souvent un talent immense sans l'écrin qu'il mérite. Nous ne créons pas seulement un site ; nous révélons votre existence au monde avec une signature visuelle qui impose le respect.
         </p>
-        <div class='mt-8 flex items-center text-sm font-bold tracking-wider text-[#6366f1] opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0'>
-          DÉCOUVRIR LE DESIGN <svg xmlns='http://www.w3.org/2000/svg' class='h-4 w-4 ml-2' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3' /></svg>
+        <div className="mt-8 flex items-center text-sm font-bold tracking-wider text-[#6366f1] opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
+          DÉCOUVRIR LE DESIGN <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Pillar 2 -->
-      <div class='group relative bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-xl transition-all duration-500 hover:border-[#6366f1]/40 hover:bg-white/[0.08] hover:-translate-y-2'>
-        <div class='mb-8 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6366f1] to-blue-600 flex items-center justify-center shadow-lg shadow-[#6366f1]/20'>
-          <svg xmlns='http://www.w3.org/2000/svg' class='h-8 w-8 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z' />
+      {/* Pillar 2 */}
+      <a href="#rendu" className="group relative bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-xl transition-all duration-500 hover:border-[#6366f1]/40 hover:bg-white/[0.08] hover:-translate-y-2">
+        <div className="mb-8 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6366f1] to-blue-600 flex items-center justify-center shadow-lg shadow-[#6366f1]/20">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" />
           </svg>
         </div>
-        <h3 class='text-2xl font-bold mb-5 group-hover:text-[#6366f1] transition-colors'>L'Effet "Classe"</h3>
-        <p class='text-slate-400 leading-relaxed'>
+        <h3 className="text-2xl font-bold mb-5 group-hover:text-[#6366f1] transition-colors">L'Effet "Classe"</h3>
+        <p className="text-slate-400 leading-relaxed">
           Dites adieu au bricolage numérique. Nous apportons ce fini professionnel — cette touche "premium" — qui rassure instantanément vos clients et justifie pleinement la valeur de votre expertise.
         </p>
-        <div class='mt-8 flex items-center text-sm font-bold tracking-wider text-[#6366f1] opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0'>
-          VOIR LE RENDU <svg xmlns='http://www.w3.org/2000/svg' class='h-4 w-4 ml-2' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3' /></svg>
+        <div className="mt-8 flex items-center text-sm font-bold tracking-wider text-[#6366f1] opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
+          VOIR LE RENDU <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Pillar 3 -->
-      <div class='group relative bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-xl transition-all duration-500 hover:border-[#6366f1]/40 hover:bg-white/[0.08] hover:-translate-y-2'>
-        <div class='mb-8 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6366f1] to-blue-600 flex items-center justify-center shadow-lg shadow-[#6366f1]/20'>
-          <svg xmlns='http://www.w3.org/2000/svg' class='h-8 w-8 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M13 10V3L4 14h7v7l9-11h-7z' />
+      {/* Pillar 3 */}
+      <a href="#image" className="group relative bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-xl transition-all duration-500 hover:border-[#6366f1]/40 hover:bg-white/[0.08] hover:-translate-y-2">
+        <div className="mb-8 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6366f1] to-blue-600 flex items-center justify-center shadow-lg shadow-[#6366f1]/20">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
-        <h3 class='text-2xl font-bold mb-5 group-hover:text-[#6366f1] transition-colors'>L'Alignement Total</h3>
-        <p class='text-slate-400 leading-relaxed'>
+        <h3 className="text-2xl font-bold mb-5 group-hover:text-[#6366f1] transition-colors">L'Alignement Total</h3>
+        <p className="text-slate-400 leading-relaxed">
           Attirer une clientèle à votre image demande une cohérence absolue. Nous synchronisons qui vous êtes avec ce que vous montrez pour créer un magnétisme naturel envers vos clients idéaux.
         </p>
-        <div class='mt-8 flex items-center text-sm font-bold tracking-wider text-[#6366f1] opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0'>
-          CRÉER VOTRE IMAGE <svg xmlns='http://www.w3.org/2000/svg' class='h-4 w-4 ml-2' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3' /></svg>
+        <div className="mt-8 flex items-center text-sm font-bold tracking-wider text-[#6366f1] opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
+          CRÉER VOTRE IMAGE <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
         </div>
-      </div>
+      </a>
     </div>
 
-    <!-- Final CTA -->
-    <div class='mt-24 text-center'>
-      <button class='px-10 py-5 bg-gradient-to-r from-[#6366f1] to-[#4f46e5] rounded-full text-white font-bold text-lg hover:shadow-2xl hover:shadow-[#6366f1]/40 transition-all duration-300 transform hover:scale-105'>
+    {/* Final CTA */}
+    <div className="mt-24 text-center">
+      <button className="px-10 py-5 bg-gradient-to-r from-[#6366f1] to-[#4f46e5] rounded-full text-white font-bold text-lg hover:shadow-2xl hover:shadow-[#6366f1]/40 transition-all duration-300 transform hover:scale-105">
         Propulser mon activité maintenant
       </button>
     </div>
@@ -397,338 +349,7 @@ export default function Home() {
 </section>` }} />
          
 
-         <div id="how_it_works" dangerouslySetInnerHTML={{ __html: `<section class="bg-slate-950 py-32 lg:py-48 font-inter overflow-hidden relative">
-  <!-- Background Orbs for Depth -->
-  <div class="absolute top-0 -left-20 w-96 h-96 bg-[#6366f1]/10 rounded-full blur-[120px]"></div>
-  <div class="absolute bottom-0 -right-20 w-96 h-96 bg-[#0f172a]/50 rounded-full blur-[120px]"></div>
-
-  <div class="container mx-auto px-6 relative z-10">
-    <!-- Header -->
-    <div class="max-w-3xl mb-24">
-      <h2 class="text-sm font-semibold tracking-widest text-[#6366f1] uppercase mb-4">
-        Processus d'Excellence
-      </h2>
-      <h3 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-8">
-        Votre Parcours vers une <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-white">Signature Visuelle</span>
-      </h3>
-      <p class="text-slate-400 text-lg md:text-xl leading-relaxed">
-        Un processus en quatre étapes : du premier contact personnalisé au grand dévoilement, sans aucune complexité technique pour vous.
-      </p>
-    </div>
-
-    <!-- Steps Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      
-      <!-- Step 1 -->
-      <div class="group relative">
-        <div class="absolute -inset-0.5 bg-gradient-to-b from-[#6366f1]/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
-        <div class="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl flex flex-col">
-          <div class="text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#6366f1]/20 transition-colors duration-500">01</div>
-          <div class="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center mb-8">
-            <svg class="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-            </svg>
-          </div>
-          <h4 class="text-xl font-bold text-white mb-4">L'Immersion</h4>
-          <p class="text-slate-400 leading-relaxed">
-            Nous plongeons dans l'ADN de votre activité pour capturer ce qui vous rend unique. C'est ici que l'on définit votre future empreinte numérique.
-          </p>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="group relative lg:mt-12">
-        <div class="absolute -inset-0.5 bg-gradient-to-b from-[#6366f1]/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
-        <div class="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl flex flex-col">
-          <div class="text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#6366f1]/20 transition-colors duration-500">02</div>
-          <div class="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center mb-8">
-            <svg class="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-          </div>
-          <h4 class="text-xl font-bold text-white mb-4">Architecture Visuelle</h4>
-          <p class="text-slate-400 leading-relaxed">
-            Nos experts transforment votre potentiel en une structure élégante. Fini le bricolage, place à un design premium qui impose le respect.
-          </p>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="group relative">
-        <div class="absolute -inset-0.5 bg-gradient-to-b from-[#6366f1]/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
-        <div class="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl flex flex-col">
-          <div class="text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#6366f1]/20 transition-colors duration-500">03</div>
-          <div class="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center mb-8">
-            <svg class="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" />
-            </svg>
-          </div>
-          <h4 class="text-xl font-bold text-white mb-4">Le Raffinement</h4>
-          <p class="text-slate-400 leading-relaxed">
-            Nous polissons chaque détail, chaque animation et chaque pixel pour assurer une cohérence totale entre qui vous êtes et ce que vous montrez.
-          </p>
-        </div>
-      </div>
-
-      <!-- Step 4 -->
-      <div class="group relative lg:mt-12">
-        <div class="absolute -inset-0.5 bg-gradient-to-b from-[#6366f1]/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
-        <div class="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl flex flex-col">
-          <div class="text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#6366f1]/20 transition-colors duration-500">04</div>
-          <div class="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center mb-8">
-            <svg class="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <h4 class="text-xl font-bold text-white mb-4">Le Dévoilement</h4>
-          <p class="text-slate-400 leading-relaxed">
-            Votre carte de visite en ligne est activée. Vous sortez de l'anonymat pour attirer une clientèle qui vous ressemble enfin.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- CTA Link -->
-    <div class="mt-20 flex justify-center">
-      <a href="#" class="group flex items-center space-x-3 text-white font-medium">
-        <span class="px-8 py-4 bg-gradient-to-r from-[#6366f1] to-indigo-700 rounded-full shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-300 transform hover:-translate-y-1">
-          Démarrer mon projet maintenant
-        </span>
-      </a>
-    </div>
-  </div>
-</section>` }} />
-         
-
-         <div id="pricing" dangerouslySetInnerHTML={{ __html: `<section class="bg-slate-950 py-32 md:py-48 relative overflow-hidden font-['Inter']">
-  <!-- Decorative Elements -->
-  <div class="absolute top-0 -left-1/4 w-1/2 h-1/2 bg-[#6366f1]/10 blur-[120px] rounded-full"></div>
-  <div class="absolute bottom-0 -right-1/4 w-1/2 h-1/2 bg-[#6366f1]/5 blur-[120px] rounded-full"></div>
-
-  <div class="container mx-auto px-6 relative z-10">
-    <div class="max-w-4xl mx-auto text-center mb-24">
-      <h2 class="text-sm font-bold tracking-[0.2em] text-[#6366f1] uppercase mb-4">Tarification</h2>
-      <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight italic">
-        Deux Voies vers la <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-white">Liberté</span>
-      </h1>
-      <p class="text-slate-400 text-xl leading-relaxed">
-        Choisissez entre l'offre 'Propriétaire' pour une autonomie totale ou l'offre 'Sérénité' (WaaS) pour un accompagnement continu et une tranquillité d'esprit absolue.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
-      <!-- Plan: Propriétaire -->
-      <div class="group relative">
-        <div class="absolute -inset-px bg-gradient-to-b from-white/10 to-transparent rounded-3xl transition duration-500 group-hover:from-[#6366f1]/30"></div>
-        <div class="relative bg-slate-900/50 backdrop-blur-xl border border-white/5 p-8 md:p-12 rounded-3xl h-full flex flex-col">
-          <div class="mb-8">
-            <h3 class="text-2xl font-bold text-white mb-2">Propriétaire</h3>
-            <p class="text-slate-400">L'indépendance et la possession totale de votre actif numérique.</p>
-          </div>
-          
-          <div class="mb-10">
-            <span class="text-5xl font-bold text-white tracking-tighter">1 800€</span>
-            <span class="text-slate-500 text-lg"> /unique</span>
-          </div>
-
-          <ul class="space-y-5 mb-12 flex-grow">
-            <li class="flex items-center text-slate-300">
-              <svg class="w-5 h-5 mr-3 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Design Signature Noxosite
-            </li>
-            <li class="flex items-center text-slate-300">
-              <svg class="w-5 h-5 mr-3 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Propriété 100% du code & domaine
-            </li>
-            <li class="flex items-center text-slate-300">
-              <svg class="w-5 h-5 mr-3 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Optimisation SEO & Performance
-            </li>
-            <li class="flex items-center text-slate-300">
-              <svg class="w-5 h-5 mr-3 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Livraison Clé en main
-            </li>
-          </ul>
-
-          <a href="#" class="block w-full py-4 px-6 rounded-2xl bg-white text-slate-950 font-bold text-center transition-all duration-300 hover:bg-[#6366f1] hover:text-white">
-            Choisir l'autonomie
-          </a>
-        </div>
-      </div>
-
-      <!-- Plan: Sérénité -->
-      <div class="group relative">
-        <div class="absolute -inset-px bg-gradient-to-b from-[#6366f1] to-transparent rounded-3xl opacity-50"></div>
-        <div class="relative bg-slate-900 border border-[#6366f1]/20 p-8 md:p-12 rounded-3xl h-full flex flex-col">
-          <div class="absolute top-0 right-12 transform -translate-y-1/2 bg-[#6366f1] text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
-            Recommandé
-          </div>
-          
-          <div class="mb-8">
-            <h3 class="text-2xl font-bold text-white mb-2">Sérénité (WaaS)</h3>
-            <p class="text-slate-400">Le site comme un service : évolution continue sans friction technique.</p>
-          </div>
-          
-          <div class="mb-10">
-            <span class="text-5xl font-bold text-white tracking-tighter">149€</span>
-            <span class="text-slate-500 text-lg"> /mois</span>
-            <p class="text-[#6366f1] text-sm font-semibold mt-2">+ 490€ de mise en place</p>
-          </div>
-
-          <ul class="space-y-5 mb-12 flex-grow">
-            <li class="flex items-center text-slate-300">
-              <svg class="w-5 h-5 mr-3 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Maintenance & Sécurité Proactive
-            </li>
-            <li class="flex items-center text-slate-300">
-              <svg class="w-5 h-5 mr-3 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Hébergement Premium inclus
-            </li>
-            <li class="flex items-center text-slate-300">
-              <svg class="w-5 h-5 mr-3 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Mises à jour de contenu mensuelles
-            </li>
-            <li class="flex items-center text-slate-300">
-              <svg class="w-5 h-5 mr-3 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Support Prioritaire 24/7
-            </li>
-          </ul>
-
-          <a href="#" class="block w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#6366f1] to-indigo-500 text-white font-bold text-center shadow-lg shadow-[#6366f1]/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-[#6366f1]/40">
-            Lancer mon projet
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-20 text-center">
-      <p class="text-slate-500 text-sm">
-        Besoin d'une solution sur-mesure ? 
-        <a href="#" class="text-white border-b border-[#6366f1] hover:text-[#6366f1] transition-colors">Contactez notre studio.</a>
-      </p>
-    </div>
-  </div>
-</section>` }} />
-         
-
-         <div id="faq" dangerouslySetInnerHTML={{ __html: `<section class="py-32 bg-neutral-950 text-white font-['Inter'] overflow-hidden">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col lg:flex-row gap-16 items-start">
-      
-      <!-- Left: Heading and CTA -->
-      <div class="w-full lg:w-1/3 sticky top-32">
-        <h2 class="text-5xl font-extrabold leading-tight mb-8">
-          Questions & <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-blue-400">Transparence</span>
-        </h2>
-        <p class="text-neutral-400 text-lg mb-10">
-          Nous répondons à vos interrogations sur le temps nécessaire, la gestion technique simplifiée et l'absence totale de coûts cachés pour propulser votre activité.
-        </p>
-        <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl">
-          <p class="text-sm font-semibold text-[#6366f1] uppercase tracking-wider mb-2">Une autre question ?</p>
-          <p class="text-white mb-6">Vous ne trouvez pas votre réponse ? Notre équipe est là pour vous guider dans votre transformation.</p>
-          <a href="#contact" class="inline-block px-8 py-4 bg-gradient-to-r from-[#6366f1] to-[#4f46e5] rounded-full text-white font-bold hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all duration-300">
-            Nous contacter
-          </a>
-        </div>
-      </div>
-
-      <!-- Right: FAQ Accordion -->
-      <div class="w-full lg:w-2/3 space-y-4">
-        
-        <!-- Item 1 -->
-        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
-          <details class="peer">
-            <summary class="flex items-center justify-between p-8 cursor-pointer list-none">
-              <h3 class="text-xl font-semibold pr-4">Combien de temps faut-il pour créer ma signature visuelle ?</h3>
-              <span class="flex-shrink-0 ml-2">
-                <svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </summary>
-            <div class="px-8 pb-8 text-neutral-400 leading-relaxed">
-              La rapidité est l'un de nos piliers. Une fois vos éléments transmis, nous livrons votre site premium en moins de 10 jours ouvrés. Notre processus est conçu pour ne pas mobiliser votre temps inutilement, tout en garantissant un fini irréprochable.
-            </div>
-          </details>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
-          <details class="peer">
-            <summary class="flex items-center justify-between p-8 cursor-pointer list-none">
-              <h3 class="text-xl font-semibold pr-4">Dois-je avoir des compétences techniques pour gérer le site ?</h3>
-              <span class="flex-shrink-0 ml-2">
-                <svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </summary>
-            <div class="px-8 pb-8 text-neutral-400 leading-relaxed">
-              Absolument aucune. Noxosite est une solution clé en main. Nous gérons l'hébergement, la maintenance technique et la sécurité. Vous disposez d'une interface ultra-simplifiée pour modifier vos textes si besoin, sans jamais toucher au code.
-            </div>
-          </details>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
-          <details class="peer">
-            <summary class="flex items-center justify-between p-8 cursor-pointer list-none">
-              <h3 class="text-xl font-semibold pr-4">Y a-t-il des coûts cachés ou des abonnements surprises ?</h3>
-              <span class="flex-shrink-0 ml-2">
-                <svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </summary>
-            <div class="px-8 pb-8 text-neutral-400 leading-relaxed">
-              La transparence est notre engagement. Tout est annoncé dès le départ. Nos tarifs incluent la création, l'optimisation mobile et l'hébergement annuel. Pas de frais de mise à jour arbitraires, pas de surprises sur votre facture.
-            </div>
-          </details>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
-          <details class="peer">
-            <summary class="flex items-center justify-between p-8 cursor-pointer list-none">
-              <h3 class="text-xl font-semibold pr-4">Est-ce que mon site sera vraiment unique ?</h3>
-              <span class="flex-shrink-0 ml-2">
-                <svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </summary>
-            <div class="px-8 pb-8 text-neutral-400 leading-relaxed">
-              Nous ne faisons pas de bricolage numérique. Chaque site est pensé pour refléter l'identité propre de l'entrepreneur. Nous alignons votre image visuelle avec vos valeurs pour que vos clients cibles se reconnaissent instantanément dans votre univers.
-            </div>
-          </details>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
-          <details class="peer">
-            <summary class="flex items-center justify-between p-8 cursor-pointer list-none">
-              <h3 class="text-xl font-semibold pr-4">Comment Noxosite m'aide-t-il à attirer de meilleurs clients ?</h3>
-              <span class="flex-shrink-0 ml-2">
-                <svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </summary>
-            <div class="px-8 pb-8 text-neutral-400 leading-relaxed">
-              L'effet "Classe" crée un biais de confiance immédiat. En passant de l'anonymat à une signature visuelle premium, vous justifiez naturellement vos tarifs et rassurez vos prospects sur la qualité de votre service avant même le premier contact.
-            </div>
-          </details>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  
-  <!-- Decorative Gradient Background Blur -->
-  <div class="absolute -bottom-48 -right-48 w-96 h-96 bg-[#6366f1] opacity-10 blur-[120px] pointer-events-none"></div>
-  <div class="absolute -top-48 -left-48 w-96 h-96 bg-[#0f172a] opacity-50 blur-[120px] pointer-events-none"></div>
-</section>` }} />
+         <div id="pricing" dangerouslySetInnerHTML={{ __html: `// The section has been removed as per the user feedback.` }} />
          
 
          <div id="contact_form" dangerouslySetInnerHTML={{ __html: `<section class="relative py-32 md:py-40 bg-slate-950 overflow-hidden font-['Inter']">
@@ -821,68 +442,68 @@ export default function Home() {
 </section>` }} />
          
 
-         <div id="footer" dangerouslySetInnerHTML={{ __html: `<footer class="bg-slate-950 text-white pt-32 pb-12 relative overflow-hidden">
-  <!-- Subtle Gradient Accent -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+         <div id="footer" dangerouslySetInnerHTML={{ __html: `<footer className="bg-slate-950 text-white pt-32 pb-12 relative overflow-hidden">
+  {/* Subtle Gradient Accent */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
   
-  <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
+  <div className="container mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
       
-      <!-- Brand Column -->
-      <div class="lg:col-span-4 space-y-8">
-        <div class="text-3xl font-bold tracking-tighter">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-white">Noxo</span>site
+      {/* Brand Column */}
+      <div className="lg:col-span-4 space-y-8">
+        <div className="text-3xl font-bold tracking-tighter">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-white">Noxo</span>site
         </div>
-        <p class="text-neutral-400 text-lg leading-relaxed max-w-sm">
+        <p className="text-neutral-400 text-lg leading-relaxed max-w-sm">
           Nous transformons le potentiel invisible des entrepreneurs en une signature visuelle irrésistible. Passez de l'ombre à l'éclat d'une marque qui impose le respect.
         </p>
-        <div class="flex space-x-5">
-          <a href="#" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#6366f1] hover:border-[#6366f1] transition-all duration-300 group">
-            <svg class="w-5 h-5 text-neutral-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        <div className="flex space-x-5">
+          <a href="#linkedin" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#6366f1] hover:border-[#6366f1] transition-all duration-300 group">
+            <svg className="w-5 h-5 text-neutral-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
-          <a href="#" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#6366f1] hover:border-[#6366f1] transition-all duration-300 group">
-            <svg class="w-5 h-5 text-neutral-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <a href="#instagram" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#6366f1] hover:border-[#6366f1] transition-all duration-300 group">
+            <svg className="w-5 h-5 text-neutral-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
         </div>
       </div>
 
-      <!-- Navigation & Pillars -->
-      <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-12">
-        <div class="space-y-6">
-          <h4 class="text-white font-semibold text-lg uppercase tracking-widest">Expertise</h4>
-          <ul class="space-y-4">
-            <li><a href="#" class="text-neutral-400 hover:text-[#6366f1] transition-colors">Design Premium</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-[#6366f1] transition-colors">Identité Digitale</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-[#6366f1] transition-colors">Expérience Utilisateur</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-[#6366f1] transition-colors">Stratégie de Marque</a></li>
+      {/* Navigation & Pillars */}
+      <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-12">
+        <div className="space-y-6">
+          <h4 className="text-white font-semibold text-lg uppercase tracking-widest">Expertise</h4>
+          <ul className="space-y-4">
+            <li><a href="#design-premium" className="text-neutral-400 hover:text-[#6366f1] transition-colors">Design Premium</a></li>
+            <li><a href="#identite-digitale" className="text-neutral-400 hover:text-[#6366f1] transition-colors">Identité Digitale</a></li>
+            <li><a href="#experience-utilisateur" className="text-neutral-400 hover:text-[#6366f1] transition-colors">Expérience Utilisateur</a></li>
+            <li><a href="#strategie-marque" className="text-neutral-400 hover:text-[#6366f1] transition-colors">Stratégie de Marque</a></li>
           </ul>
         </div>
 
-        <div class="space-y-6">
-          <h4 class="text-white font-semibold text-lg uppercase tracking-widest">Notre Impact</h4>
-          <ul class="space-y-4">
-            <li class="group cursor-default">
-              <span class="block text-white font-medium">La Fin de l'Anonymat</span>
-              <span class="text-sm text-neutral-500">Révéler votre talent caché.</span>
+        <div className="space-y-6">
+          <h4 className="text-white font-semibold text-lg uppercase tracking-widest">Notre Impact</h4>
+          <ul className="space-y-4">
+            <li className="group cursor-default">
+              <span className="block text-white font-medium">La Fin de l'Anonymat</span>
+              <span className="text-sm text-neutral-500">Révéler votre talent caché.</span>
             </li>
-            <li class="group cursor-default">
-              <span class="block text-white font-medium">L'Effet "Classe"</span>
-              <span class="text-sm text-neutral-500">La valeur du fini professionnel.</span>
+            <li className="group cursor-default">
+              <span className="block text-white font-medium">L'Effet "Classe"</span>
+              <span className="text-sm text-neutral-500">La valeur du fini professionnel.</span>
             </li>
-            <li class="group cursor-default">
-              <span class="block text-white font-medium">L'Alignement Total</span>
-              <span class="text-sm text-neutral-500">Attirez ceux qui vous ressemblent.</span>
+            <li className="group cursor-default">
+              <span className="block text-white font-medium">L'Alignement Total</span>
+              <span className="text-sm text-neutral-500">Attirez ceux qui vous ressemblent.</span>
             </li>
           </ul>
         </div>
 
-        <div class="space-y-6">
-          <h4 class="text-white font-semibold text-lg uppercase tracking-widest">Contact</h4>
-          <ul class="space-y-4">
-            <li class="text-neutral-400">Basés à Paris, rayonnant partout.</li>
-            <li><a href="mailto:hello@noxosite.com" class="text-white font-medium hover:text-[#6366f1] transition-colors">hello@noxosite.com</a></li>
+        <div className="space-y-6">
+          <h4 className="text-white font-semibold text-lg uppercase tracking-widest">Contact</h4>
+          <ul className="space-y-4">
+            <li className="text-neutral-400">Basés à Paris, rayonnant partout.</li>
+            <li><a href="mailto:contact.novosite@gmail.com" className="text-white font-medium hover:text-[#6366f1] transition-colors">contact.novosite@gmail.com</a></li>
             <li>
-               <a href="#" class="inline-block mt-4 px-6 py-3 rounded-full bg-gradient-to-r from-[#6366f1] to-indigo-800 text-white font-semibold text-sm hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all">
+               <a href="#demarrer-projet" className="inline-block mt-4 px-6 py-3 rounded-full bg-gradient-to-r from-[#6366f1] to-indigo-800 text-white font-semibold text-sm hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all">
                 Démarrer un projet
               </a>
             </li>
@@ -891,22 +512,293 @@ export default function Home() {
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-      <p class="text-neutral-500 text-sm">
+    {/* Bottom Bar */}
+    <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p className="text-neutral-500 text-sm">
         &copy; 2024 Noxosite. Fièrement conçu pour les entrepreneurs d'exception.
       </p>
-      <div class="flex space-x-8">
-        <a href="#" class="text-xs text-neutral-500 hover:text-white transition-colors uppercase tracking-widest">Mentions Légales</a>
-        <a href="#" class="text-xs text-neutral-500 hover:text-white transition-colors uppercase tracking-widest">Confidentialité</a>
-        <a href="#" class="text-xs text-neutral-500 hover:text-white transition-colors uppercase tracking-widest">Cookies</a>
+      <div className="flex space-x-8">
+        <a href="#mentions-legales" className="text-xs text-neutral-500 hover:text-white transition-colors uppercase tracking-widest">Mentions Légales</a>
+        <a href="#confidentialite" className="text-xs text-neutral-500 hover:text-white transition-colors uppercase tracking-widest">Confidentialité</a>
+        <a href="#cookies" className="text-xs text-neutral-500 hover:text-white transition-colors uppercase tracking-widest">Cookies</a>
       </div>
     </div>
   </div>
 
-  <!-- Visual element -->
-  <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-[#6366f1]/10 rounded-full blur-[120px]"></div>
+  {/* Visual element */}
+  <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#6366f1]/10 rounded-full blur-[120px]"></div>
 </footer>` }} />
+         
+
+         <div id="header" dangerouslySetInnerHTML={{ __html: `<header className="fixed top-0 left-0 w-full z-[100] border-b border-white/5 backdrop-blur-xl bg-slate-950/70">
+  <nav className="container mx-auto px-6 h-24 flex items-center justify-between">
+    {/* Logo */}
+    <div className="flex items-center gap-2">
+      <div className="w-10 h-10 bg-gradient-to-br from-[#6366f1] to-[#4f46e5] rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
+        <span className="text-white font-black text-xl italic">N</span>
+      </div>
+      <span className="text-2xl font-bold tracking-tight text-white">
+        Noxo<span className="text-[#6366f1]">site</span>
+      </span>
+    </div>
+
+    {/* Desktop Navigation */}
+    <div className="hidden md:flex items-center gap-10">
+      <a href="#vision" className="text-sm font-medium text-neutral-400 hover:text-[#6366f1] transition-colors duration-300 relative group">
+        La Vision
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6366f1] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#expertise" className="text-sm font-medium text-neutral-400 hover:text-[#6366f1] transition-colors duration-300 relative group">
+        L'Effet Classe
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6366f1] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#alignement" className="text-sm font-medium text-neutral-400 hover:text-[#6366f1] transition-colors duration-300 relative group">
+        L'Alignement
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6366f1] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </div>
+
+    {/* CTA Button */}
+    <div className="flex items-center gap-6">
+      <a href="#contact" className="hidden lg:block text-sm font-semibold text-white hover:text-[#6366f1] transition-colors">
+        Parlons de vous
+      </a>
+      <a href="#devis" className="px-8 py-3.5 bg-gradient-to-r from-[#6366f1] to-[#4f46e5] text-white rounded-full font-bold text-sm hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] hover:-translate-y-0.5 transition-all duration-300">
+        Créer ma Signature
+      </a>
+      
+      {/* Mobile Toggle */}
+      <button className="md:hidden flex flex-col gap-1.5">
+        <div className="w-6 h-0.5 bg-white"></div>
+        <div className="w-6 h-0.5 bg-white"></div>
+        <div className="w-4 h-0.5 bg-[#6366f1] self-end"></div>
+      </button>
+    </div>
+  </nav>
+</header>` }} />
+         
+
+         <div id="how_it_works" dangerouslySetInnerHTML={{ __html: `<section className="bg-slate-950 py-32 lg:py-48 font-inter overflow-hidden relative">
+  {/* Background Orbs for Depth */}
+  <div className="absolute top-0 -left-20 w-96 h-96 bg-[#6366f1]/10 rounded-full blur-[120px]"></div>
+  <div className="absolute bottom-0 -right-20 w-96 h-96 bg-[#0f172a]/50 rounded-full blur-[120px]"></div>
+
+  <div className="container mx-auto px-6 relative z-10">
+    {/* Header */}
+    <div className="max-w-3xl mb-24">
+      <h2 className="text-sm font-semibold tracking-widest text-[#6366f1] uppercase mb-4">
+        Processus d'Excellence
+      </h2>
+      <h3 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-8">
+        Votre Parcours vers une <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-white">Signature Visuelle</span>
+      </h3>
+      <p className="text-slate-400 text-lg md:text-xl leading-relaxed">
+        Un processus en quatre étapes : du premier contact personnalisé au grand dévoilement, sans aucune complexité technique pour vous.
+      </p>
+    </div>
+
+    {/* Steps Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      {/* Step 1 */}
+      <div className="group relative">
+        <div className="absolute -inset-0.5 bg-gradient-to-b from-[#6366f1]/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        <div className="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl flex flex-col">
+          <div className="text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#6366f1]/20 transition-colors duration-500">01</div>
+          <div className="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center mb-8">
+            <svg className="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+            </svg>
+          </div>
+          <h4 className="text-xl font-bold text-white mb-4">L'Immersion</h4>
+          <p className="text-slate-400 leading-relaxed">
+            Nous plongeons dans l'ADN de votre activité pour capturer ce qui vous rend unique. C'est ici que l'on définit votre future empreinte numérique.
+          </p>
+        </div>
+      </div>
+
+      {/* Step 2 */}
+      <div className="group relative lg:mt-12">
+        <div className="absolute -inset-0.5 bg-gradient-to-b from-[#6366f1]/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        <div className="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl flex flex-col">
+          <div className="text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#6366f1]/20 transition-colors duration-500">02</div>
+          <div className="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center mb-8">
+            <svg className="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h4 className="text-xl font-bold text-white mb-4">Architecture Visuelle</h4>
+          <p className="text-slate-400 leading-relaxed">
+            Nos experts transforment votre potentiel en une structure élégante. Fini le bricolage, place à un design premium qui impose le respect.
+          </p>
+        </div>
+      </div>
+
+      {/* Step 3 */}
+      <div className="group relative">
+        <div className="absolute -inset-0.5 bg-gradient-to-b from-[#6366f1]/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        <div className="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl flex flex-col">
+          <div className="text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#6366f1]/20 transition-colors duration-500">03</div>
+          <div className="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center mb-8">
+            <svg className="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" />
+            </svg>
+          </div>
+          <h4 className="text-xl font-bold text-white mb-4">Le Raffinement</h4>
+          <p className="text-slate-400 leading-relaxed">
+            Nous polissons chaque détail, chaque animation et chaque pixel pour assurer une cohérence totale entre qui vous êtes et ce que vous montrez.
+          </p>
+        </div>
+      </div>
+
+      {/* Step 4 */}
+      <div className="group relative lg:mt-12">
+        <div className="absolute -inset-0.5 bg-gradient-to-b from-[#6366f1]/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        <div className="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl flex flex-col">
+          <div className="text-6xl font-black text-white/5 absolute top-4 right-6 group-hover:text-[#6366f1]/20 transition-colors duration-500">04</div>
+          <div className="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center mb-8">
+            <svg className="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h4 className="text-xl font-bold text-white mb-4">Le Dévoilement</h4>
+          <p className="text-slate-400 leading-relaxed">
+            Votre carte de visite en ligne est activée. Vous sortez de l'anonymat pour attirer une clientèle qui vous ressemble enfin.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    {/* CTA Link */}
+    <div className="mt-20 flex justify-center">
+      <a href="https://noxosite.com/start-project" className="group flex items-center space-x-3 text-white font-medium">
+        <span className="px-8 py-4 bg-gradient-to-r from-[#6366f1] to-indigo-700 rounded-full shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-300 transform hover:-translate-y-1">
+          Démarrer mon projet maintenant
+        </span>
+      </a>
+    </div>
+  </div>
+</section>` }} />
+         
+
+         <div id="faq" dangerouslySetInnerHTML={{ __html: `<section className="relative py-32 bg-neutral-950 text-white font-['Inter'] overflow-hidden">
+  <div className="container mx-auto px-6">
+    <div className="flex flex-col lg:flex-row gap-16 items-start">
+      
+      {/* Left: Heading and CTA */}
+      <div className="w-full lg:w-1/3 sticky top-32">
+        <h2 className="text-5xl font-extrabold leading-tight mb-8">
+          Questions & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-blue-400">Transparence</span>
+        </h2>
+        <p className="text-neutral-400 text-lg mb-10">
+          Nous répondons à vos interrogations sur le temps nécessaire, la gestion technique simplifiée et l'absence totale de coûts cachés pour propulser votre activité.
+        </p>
+        <div className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl">
+          <p className="text-sm font-semibold text-[#6366f1] uppercase tracking-wider mb-2">Une autre question ?</p>
+          <p className="text-white mb-6">Vous ne trouvez pas votre réponse ? Notre équipe est là pour vous guider dans votre transformation.</p>
+          <a href="#contact" className="inline-block px-8 py-4 bg-gradient-to-r from-[#6366f1] to-[#4f46e5] rounded-full text-white font-bold hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all duration-300">
+            Nous contacter
+          </a>
+        </div>
+      </div>
+
+      {/* Right: FAQ Accordion */}
+      <div className="w-full lg:w-2/3 space-y-4">
+        
+        {/* Item 1 */}
+        <div className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
+          <details className="peer">
+            <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
+              <h3 className="text-xl font-semibold pr-4">Combien de temps faut-il pour créer ma signature visuelle ?</h3>
+              <span className="flex-shrink-0 ml-2">
+                <svg className="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div className="px-8 pb-8 text-neutral-400 leading-relaxed">
+              La rapidité est l'un de nos piliers. Une fois vos éléments transmis, nous livrons votre site premium en moins de 10 jours ouvrés. Notre processus est conçu pour ne pas mobiliser votre temps inutilement, tout en garantissant un fini irréprochable.
+            </div>
+          </details>
+        </div>
+
+        {/* Item 2 */}
+        <div className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
+          <details className="peer">
+            <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
+              <h3 className="text-xl font-semibold pr-4">Dois-je avoir des compétences techniques pour gérer le site ?</h3>
+              <span className="flex-shrink-0 ml-2">
+                <svg className="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div className="px-8 pb-8 text-neutral-400 leading-relaxed">
+              Absolument aucune. Noxosite est une solution clé en main. Nous gérons l'hébergement, la maintenance technique et la sécurité. Vous disposez d'une interface ultra-simplifiée pour modifier vos textes si besoin, sans jamais toucher au code.
+            </div>
+          </details>
+        </div>
+
+        {/* Item 3 */}
+        <div className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
+          <details className="peer">
+            <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
+              <h3 className="text-xl font-semibold pr-4">Y a-t-il des coûts cachés ou des abonnements surprises ?</h3>
+              <span className="flex-shrink-0 ml-2">
+                <svg className="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div className="px-8 pb-8 text-neutral-400 leading-relaxed">
+              La transparence est notre engagement. Tout est annoncé dès le départ. Nos tarifs incluent la création, l'optimisation mobile et l'hébergement annuel. Pas de frais de mise à jour arbitraires, pas de surprises sur votre facture.
+            </div>
+          </details>
+        </div>
+
+        {/* Item 4 */}
+        <div className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
+          <details className="peer">
+            <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
+              <h3 className="text-xl font-semibold pr-4">Est-ce que mon site sera vraiment unique ?</h3>
+              <span className="flex-shrink-0 ml-2">
+                <svg className="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div className="px-8 pb-8 text-neutral-400 leading-relaxed">
+              Nous ne faisons pas de bricolage numérique. Chaque site est pensé pour refléter l'identité propre de l'entrepreneur. Nous alignons votre image visuelle avec vos valeurs pour que vos clients cibles se reconnaissent instantanément dans votre univers.
+            </div>
+          </details>
+        </div>
+
+        {/* Item 5 */}
+        <div className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-300">
+          <details className="peer">
+            <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
+              <h3 className="text-xl font-semibold pr-4">Comment Noxosite m'aide-t-il à attirer de meilleurs clients ?</h3>
+              <span className="flex-shrink-0 ml-2">
+                <svg className="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div className="px-8 pb-8 text-neutral-400 leading-relaxed">
+              L'effet "Classe" crée un biais de confiance immédiat. En passant de l'anonymat à une signature visuelle premium, vous justifiez naturellement vos tarifs et rassurez vos prospects sur la qualité de votre service avant même le premier contact.
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  {/* Decorative Gradient Background Blur */}
+  <div className="absolute -bottom-48 -right-48 w-96 h-96 bg-[#6366f1] opacity-10 blur-[120px] pointer-events-none"></div>
+  <div className="absolute -top-48 -left-48 w-96 h-96 bg-[#0f172a] opacity-50 blur-[120px] pointer-events-none"></div>
+</section>` }} />
          
     </main>
   );
