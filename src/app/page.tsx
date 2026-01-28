@@ -352,94 +352,142 @@ export default function Home() {
          <div id="pricing" dangerouslySetInnerHTML={{ __html: `// The section has been removed as per the user feedback.` }} />
          
 
-         <div id="contact_form" dangerouslySetInnerHTML={{ __html: `<section class="relative py-32 md:py-40 bg-slate-950 overflow-hidden font-['Inter']">
-  <!-- Decorative Background Glow -->
-  <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-[#6366f1]/10 rounded-full blur-[120px] pointer-events-none"></div>
-  <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#0f172a]/40 rounded-full blur-[100px] pointer-events-none"></div>
+         <div id="contact_form" dangerouslySetInnerHTML={{ __html: `"use client";
 
-  <div class="container mx-auto px-6 relative z-10">
-    <div class="grid lg:grid-cols-2 gap-20 items-center">
-      
-      <!-- Content Column -->
-      <div>
-        <span class="inline-block py-1 px-4 rounded-full bg-[#6366f1]/10 border border-[#6366f1]/20 text-[#6366f1] text-sm font-semibold tracking-wider uppercase mb-6">
-          Contactez Noxosite
-        </span>
-        <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-8">
-          Passez de l'ombre à <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-indigo-400">l'éclat numérique.</span>
-        </h2>
-        <p class="text-slate-400 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-          Votre talent immense mérite enfin l'écrin qu'il mérite. Nous créons la signature visuelle qui impose le respect dès le premier clic.
-        </p>
+import { Check, ArrowRight } from "lucide-react";
 
-        <div class="space-y-8">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-              <svg class="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
-            </div>
-            <div>
-              <h4 class="text-white font-bold text-lg">La Fin de l'Anonymat</h4>
-              <p class="text-slate-500">Révélez votre existence au monde avec un design qui vous ressemble.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-              <svg class="w-6 h-6 text-[#6366f1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-            </div>
-            <div>
-              <h4 class="text-white font-bold text-lg">L'Effet Classe</h4>
-              <p class="text-slate-500">Un fini professionnel premium qui justifie instantanément votre valeur.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+const ContactSection = () => {
+  return (
+    <section className="relative py-32 md:py-40 bg-slate-950 overflow-hidden font-['Inter']">
+      {/* Decorative Background Glow */}
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-[#6366f1]/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#0f172a]/40 rounded-full blur-[100px] pointer-events-none"></div>
 
-      <!-- Form Column -->
-      <div class="relative">
-        <div class="absolute -inset-1 bg-gradient-to-r from-[#6366f1] to-indigo-900 rounded-[2.5rem] blur opacity-20"></div>
-        <div class="relative bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-[2rem] shadow-2xl">
-          <form action="#" class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="space-y-2">
-                <label class="text-sm font-medium text-slate-300 ml-1">Nom complet</label>
-                <input type="text" placeholder="Jean Dupont" class="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#6366f1]/50 focus:border-[#6366f1] transition-all">
-              </div>
-              <div class="space-y-2">
-                <label class="text-sm font-medium text-slate-300 ml-1">Email professionnel</label>
-                <input type="email" placeholder="jean@entreprise.fr" class="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#6366f1]/50 focus:border-[#6366f1] transition-all">
-              </div>
-            </div>
-            
-            <div class="space-y-2">
-              <label class="text-sm font-medium text-slate-300 ml-1">Votre ambition</label>
-              <select class="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#6366f1]/50 focus:border-[#6366f1] transition-all">
-                <option value="" disabled selected>Quel est votre projet ?</option>
-                <option value="creation">Création de site vitrine</option>
-                <option value="redesign">Refonte identité visuelle</option>
-                <option value="conseil">Conseil en alignement de marque</option>
-              </select>
-            </div>
-
-            <div class="space-y-2">
-              <label class="text-sm font-medium text-slate-300 ml-1">Parlez-nous de votre activité</label>
-              <textarea rows="4" placeholder="Décrivez-nous ce qui rend votre service unique..." class="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#6366f1]/50 focus:border-[#6366f1] transition-all"></textarea>
-            </div>
-
-            <button type="submit" class="w-full group relative flex items-center justify-center gap-3 bg-gradient-to-r from-[#6366f1] to-indigo-600 hover:to-indigo-500 text-white font-bold py-5 px-8 rounded-2xl shadow-lg shadow-indigo-500/25 transition-all duration-300 transform hover:-translate-y-1">
-              <span>Démarrer ma transformation</span>
-              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </button>
-
-            <p class="text-center text-slate-500 text-xs">
-              Réponse garantie sous 48h. Votre succès est notre priorité.
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          {/* Content Column */}
+          <div>
+            <span className="inline-block py-1 px-4 rounded-full bg-[#6366f1]/10 border border-[#6366f1]/20 text-[#6366f1] text-sm font-semibold tracking-wider uppercase mb-6">
+              Contactez Noxosite
+            </span>
+            <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-8">
+              Passez de l'ombre à{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-indigo-400">
+                l'éclat numérique.
+              </span>
+            </h2>
+            <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
+              Votre talent immense mérite enfin l'écrin qu'il mérite. Nous
+              créons la signature visuelle qui impose le respect dès le premier
+              clic.
             </p>
-          </form>
+
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                  <Check className="w-6 h-6 text-[#6366f1]" />
+                </div>
+                <div>
+                  <h4 className="text-white font-bold text-lg">
+                    C'est magnifique pour vos clients
+                  </h4>
+                  <p className="text-slate-500">
+                    Révélez votre existence au monde avec un design qui vous
+                    ressemble.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                  <ArrowRight className="w-6 h-6 text-[#6366f1]" />
+                </div>
+                <div>
+                  <h4 className="text-white font-bold text-lg">L'Effet Classe</h4>
+                  <p className="text-slate-500">
+                    Un fini professionnel premium qui justifie instantanément
+                    votre valeur.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Form Column */}
+          <div className="relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#6366f1] to-indigo-900 rounded-[2.5rem] blur opacity-20"></div>
+            <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-[2rem] shadow-2xl">
+              <form action="#" className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-slate-300 ml-1">
+                      Nom complet
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Jean Dupont"
+                      className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#6366f1]/50 focus:border-[#6366f1] transition-all"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-slate-300 ml-1">
+                      Email professionnel
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="jean@entreprise.fr"
+                      className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#6366f1]/50 focus:border-[#6366f1] transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-slate-300 ml-1">
+                    Votre ambition
+                  </label>
+                  <select className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#6366f1]/50 focus:border-[#6366f1] transition-all">
+                    <option value="" disabled selected>
+                      Quel est votre projet ?
+                    </option>
+                    <option value="creation">Création de site vitrine</option>
+                    <option value="redesign">Refonte identité visuelle</option>
+                    <option value="conseil">
+                      Conseil en alignement de marque
+                    </option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-slate-300 ml-1">
+                    Parlez-nous de votre activité
+                  </label>
+                  <textarea
+                    rows={4}
+                    placeholder="Décrivez-nous ce qui rend votre service unique..."
+                    className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-[#6366f1]/50 focus:border-[#6366f1] transition-all"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full group relative flex items-center justify-center gap-3 bg-gradient-to-r from-[#6366f1] to-indigo-600 hover:to-indigo-500 text-white font-bold py-5 px-8 rounded-2xl shadow-lg shadow-indigo-500/25 transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  <span>Démarrer ma transformation</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+
+                <p className="text-center text-slate-500 text-xs">
+                  Réponse garantie sous 48h. Votre succès est notre priorité.
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+  );
+};
 
-    </div>
-  </div>
-</section>` }} />
+export default ContactSection;` }} />
          
 
          <div id="footer" dangerouslySetInnerHTML={{ __html: `<footer className="bg-slate-950 text-white pt-32 pb-12 relative overflow-hidden">
